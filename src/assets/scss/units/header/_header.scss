@@ -1,0 +1,20 @@
+.header{
+    padding: 0 20px;
+	@media (min-width: 768px){
+		padding: 0 calc(1.5rem + ((1vw - 7.68px) * 6.25));
+	}
+	@media (min-width: 1024px){
+		padding: 0 calc(2.5rem + ((1vw - 10.24px) * 2.2321));
+	}
+}
+
+.header__inner{
+    padding: 20px 0;
+    @media (min-width: 1024px){
+        padding: 24px 0;
+    }
+
+    @media (min-width: 1600px){
+        padding: 30px 0;
+    }
+}
