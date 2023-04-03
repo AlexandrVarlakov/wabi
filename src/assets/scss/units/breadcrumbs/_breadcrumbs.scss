@@ -1,0 +1,30 @@
+.breadcrumbs{
+    display: flex;
+    gap: 5px;
+}
+
+.breadcrumbs__link{
+    padding: 5px 11px;
+
+    border-radius: 5px;    
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #FFFFFF;
+    background-color: #22B6C7;
+    display: inline-flex;
+    align-items: center;
+    transition: 300ms;
+
+
+    &:hover{
+        background-color: #393939;
+    }
+
+    @media (min-width: 1600px){
+        font-size: 14px;
+        padding: 7px 11px;
+        border-radius: 10px;
+    }
+}
+

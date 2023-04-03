@@ -1,0 +1,21 @@
+.faq-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    align-items: flex-start;
+    @media (min-width: 540px){
+        grid-template-columns: 1fr 185px;
+    }
+    @media (min-width: 1600px){
+        grid-template-columns: 1fr 350px;
+    }
+}
+
+.faq-content{
+    max-width: 757px;
+    margin-left: auto;
+
+    @media (min-width: 1023px){
+        max-width: 70%;
+    }
+}

@@ -1,0 +1,792 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+    <main class="o-pages">
+        <section class="section">
+            <div class="section__inner">
+                <div class="section__block section__block_filter ">
+                    <h1 class="section__title">Продажа</h1>
+
+                    <div class="slider-filter">
+                        <a class="filter-link active" href="#">Собственные</a>
+                        <a class="filter-link" href="#">Партнерские</a>
+                    </div>
+
+                    <a href="#" class="all">Все</a>
+                </div>
+                <div class="section__content">
+                    
+
+
+                    <div class="realty-container">
+
+                        <div class="realty-filter-block">
+
+                            <div class="desk-realty-filters">
+
+                                <div class="desk-realty-filters__square-ranges">
+                                    <div class="desk-realty-filters__input-wrap">
+                                        <input type="tel" class="desk-realty-filters__input left" placeholder="100м2" id="id-2164">
+                                        <label for="id-2164" class="desk-realty-filters__label">от</label>
+                                    </div>
+                                    <div class="desk-realty-filters__input-wrap">
+                                        <input type="tel" class="desk-realty-filters__input right" placeholder="300м2" id="id-7516">
+                                        <label for="id-7516" class="desk-realty-filters__label">до</label>
+                                    </div>
+                                </div>
+                                <div class="realty-rooms">
+                                    <button class="realty-rooms__btn">
+                                        <span class="realty-rooms__value">Комнат</span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 5.5L7 11L12.5 5.5" stroke="black" stroke-opacity="0.7"/>
+                                        </svg>                                            
+                                    </button>
+
+                                    <div class="realty-rooms__variants-container">
+                                        <p class="realty-rooms__variants-title">Количество комнат:</p>
+                                        <div class="realty-rooms__variants-list">
+                                            <div>
+                                                <input type="checkbox" class="realty-rooms__variant" id="room-1" value="1">
+                                                <label class="realty-rooms__variant-label" for="room-1">
+                                                    1
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="realty-rooms__variant" id="room-2" value="2">
+                                                <label class="realty-rooms__variant-label" for="room-2">
+                                                    2
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-rooms__variant" id="room-3" value="3">
+                                                <label class="realty-rooms__variant-label" for="room-3">
+                                                    3
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-rooms__variant" id="room-4" value="4">
+                                                <label class="realty-rooms__variant-label" for="room-4">
+                                                    4
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-rooms__variant" id="room-5" value="5">
+                                                <label class="realty-rooms__variant-label" for="room-5">
+                                                    5
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                                
+                                <div class="desk-realty-filters__price-ranges">
+                                    <div class="desk-realty-filters__input-wrap">
+                                        <input type="tel" class="desk-realty-filters__input left" placeholder="3 549 022 Р" id="id-01782">
+                                        <label for="id-01782" class="desk-realty-filters__label">от</label>
+                                    </div>
+                                    <div class="desk-realty-filters__input-wrap">
+                                        <input type="tel" class="desk-realty-filters__input right" placeholder="60 149 020 Р" id="id-02384">
+                                        <label for="id-02384" class="desk-realty-filters__label">до</label>
+                                    </div>
+                                </div>
+
+                                <div class="realty-zone">
+                                    <button class="realty-zone__btn">
+                                        <span class="realty-zone__value">Район</span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 5.5L7 11L12.5 5.5" stroke="black" stroke-opacity="0.7"/>
+                                        </svg>                                            
+                                    </button>
+
+                                    <div class="realty-zone__variants-container">
+                                        <p class="realty-zone__variants-title">Выбирете район(ы):</p>
+                                        <div class="realty-zone__variants-list">
+                                            <div>
+                                                <input type="checkbox" class="realty-zone__variant" id="zone-1" value="Бодрум">
+                                                <label class="realty-zone__variant-label" for="zone-1">
+                                                    Бодрум
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" class="realty-zone__variant" id="zone-2" value="Район 2">
+                                                <label class="realty-zone__variant-label" for="zone-2">
+                                                    Район 2
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-zone__variant" id="zone-3" value="Район 3">
+                                                <label class="realty-zone__variant-label" for="zone-3">
+                                                    Район 3
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-zone__variant" id="zone-4" value="Район 4">
+                                                <label class="realty-zone__variant-label" for="zone-4">
+                                                    Район 4
+                                                </label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="checkbox" class="realty-zone__variant" id="zone-5" value="Район 5">
+                                                <label class="realty-zone__variant-label" for="zone-5">
+                                                    Район 5
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+
+                                <div class="show-filter-xl">
+                                    <button class="show-filter-xl__btn" data-role="call-filter" data-modal-name="realty-filter" data-target="sale">Все фильтры</button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="show-filter-md">
+                                <button class="show-filter-md__btn" data-role="call-filter" data-modal-name="realty-filter" data-target="sale">Фильтр</button>
+                            </div>
+                            
+
+
+                            <div class="sort-and-type">
+
+                                
+
+
+                                <div class="sort-select-wrap">
+
+                                    <select name="sort-by" class="sort-select">
+                                        <option value="" selected disabled>Сортировать по</option>
+                                        <option value="price">Цене</option>
+                                        <option value="public">Публикации</option>
+                                        <option value="views">Популярности</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="card-type-select">
+                                    <button class="card-type-select__btn active">
+                                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                            <rect y="9.53418" width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                            <rect x="16.3447" width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                            <rect x="8.17236" width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                            <rect x="16.3447" y="9.53418" width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                            <rect x="8.17236" y="9.53418" width="5.44824" height="5.44824" fill="#D9D9D9"/>
+                                        </svg>                                        
+                                    </button>
+                                    <button class="card-type-select__btn" data-type="list-type">
+                                        <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="5.16183" height="5.16183" fill="#D9D9D9"/>
+                                            <rect y="8.38818" width="5.16183" height="5.16183" fill="#D9D9D9"/>
+                                            <rect x="8.388" width="12.2593" height="5.16183" fill="#D9D9D9"/>
+                                            <rect x="8.388" y="8.38818" width="12.2593" height="5.16183" fill="#D9D9D9"/>
+                                        </svg>
+                                            
+                                    </button>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+
+
+                        <div class="cards-list">
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">WABI DöRTtEPE</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                        
+                                        <p class="card__description">Летняя терраса и зона барбекю Система кондиционирования VRF
+                                            Сантехника итальянского производителя Bocchi
+                                            Все виллы имеют панорамный вид на горы и озеро</p>
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+        
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+            
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">2х комнатная вилла</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                    
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+                                        <div class="card__public-date">
+                                            21.12.2017
+                                        </div>
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+        
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">WABI DöRTtEPE</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                    
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+        
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+        
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">WABI DöRTtEPE</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                        
+                                        <p class="card__description">Летняя терраса и зона барбекю Система кондиционирования VRF
+                                            Сантехника итальянского производителя Bocchi
+                                            Все виллы имеют панорамный вид на горы и озеро</p>
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+        
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+            
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">WABI DöRTtEPE</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                    
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+                                        <div class="card__public-date">
+                                            21.12.2017
+                                        </div>
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+        
+                            <a href="#" class="card">
+                                <div class="card__img-block">
+                                    <div class="card__object-label promo">
+                                        Лучшее предложение
+                                    </div>
+                                    <div class="card__object-label state">
+                                        Продажа
+                                    </div>
+                                    
+                                    <img src="assets/img/objects/1.jpg" alt="" class="card__img">
+                                </div>
+            
+                                <div class="card__text-block">
+                                    
+                                        <p class="card__object-name">WABI DöRTtEPE</p>
+            
+                                        <div class="card__price-block">
+                                            <p class="card__price">$ 76 800</p>
+                                            <img src="assets/img/icons/black-arrow.svg" alt="" class="arrow">
+                                        </div>
+                                    
+            
+                                        <div class="card__area"><span class="card__area-value">140,00 м<sup>2</sup></span>
+                                            <span class="card__area-label">Жилая площадь</span>
+                                        </div>
+        
+                                        <div class="card__pool-top">
+                                            <span class="label">Бассейн</span>
+                                            <span class="value">есть</span>
+                                        </div>
+                                            
+                                        <div class="card__mob-center-options">
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__mob-options-cell">
+                                                <span class="label">Спальных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div>
+                                                <div class="card__pool-mob">
+                                                    <span class="label">Бассейн</span>
+                                                    <span class="value">есть</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__center-options">
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Ванных комнат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Парковочных мест</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                            <div class="card__center-option-cell">
+                                                <span class="label">Спальных конат</span>
+                                                <span class="value">2</span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">Район:</span>
+                                            <span class="value">Красносельский </span>
+                                        </div>
+                                        <div class="card__bottom-cell-option">
+                                            <span class="label">До моря</span>
+                                            <span class="value">5 минут пешком</span>
+                                        </div>
+                                           
+            
+                                    
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="section__block">
+                            <nav class="pagination-block">
+                                <button class="load-more">Загрузить еще</button>
+                                <div class="pagination-container">
+                                    <div class="pagination">
+                                        <a href="#" class="pagination__btn disabled" >
+                                            <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.291428 7.29289C-0.0990959 7.68341 -0.0990959 8.31658 0.291428 8.7071L6.65539 15.0711C7.04591 15.4616 7.67908 15.4616 8.0696 15.0711C8.46013 14.6805 8.46013 14.0474 8.0696 13.6569L2.41275 8L8.0696 2.34314C8.46013 1.95262 8.46013 1.31945 8.0696 0.928929C7.67908 0.538405 7.04591 0.538405 6.65539 0.928929L0.291428 7.29289ZM40.8047 7L0.998535 7L0.998535 9L40.8047 9L40.8047 7Z" fill="black"/>
+                                            </svg>                                        
+                                        </a>
+                                        <a href="#" class="pagination__btn active">1</a>
+                                        <a href="#" class="pagination__btn">2</a>
+                                        <a href="#" class="pagination__btn">3</a>
+                                        <span  class="pagination__btn">...</span>
+                                        <a href="#" class="pagination__btn">5</a>
+                                        <a href="#" class="pagination__btn">
+                                            <svg width="42" height="16" viewBox="0 0 42 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M41.3179 8.70711C41.7085 8.31658 41.7085 7.68342 41.3179 7.29289L34.954 0.928932C34.5635 0.538408 33.9303 0.538408 33.5398 0.928932C33.1492 1.31946 33.1492 1.95262 33.5398 2.34315L39.1966 8L33.5398 13.6569C33.1492 14.0474 33.1492 14.6805 33.5398 15.0711C33.9303 15.4616 34.5635 15.4616 34.954 15.0711L41.3179 8.70711ZM0.804688 9H40.6108V7H0.804688V9Z" fill="black"/>
+                                            </svg>                                        
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__inner">
+
+                <div class="s-au-feed-block">
+                    <div>
+                        <button class="transparent-square-btn" data-role="call-modal" data-modal-name="send-question">
+                            <span>Задать <br/>вопрос</span>
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow" >
+                                <line x1="28.6875" y1="1.35355" x2="0.354209" y2="29.6869" stroke="#3D3D3D"/>
+                                <path d="M0 1H30V31" stroke="#3D3D3D"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+    
+                    <form action="#" class="page-form">
+                        <div class="page-form__body">
+                            <h3 class="h3">Скачать каталог <br />свежих преложений</h3>
+
+                            <div class="page-form__inputs-container">
+                                <div class="input-wrap">
+                                    <input type="text" name="name" placeholder="Введите имя" class="input input-with-label" id="name-1" required>
+                                    <label for="name-1" class="input-label">Имя</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" name="phone" placeholder="Введите телефон" class="input input-with-label" id="phone-1" required>
+                                    <label for="phone-1" class="input-label">Телефон</label>
+                                </div>
+                                <div class="modal__approve-block">
+                                    <div class="custom-cb">
+                                        <input type="checkbox" name="approve" id="approve-1" class="custom-cb__cb">
+                                        <label for="approve-1" class="custom-cb__box">
+                                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                        </label>
+                                    </div>
+                                    <p class="modal__approve-text">Нажимая на кнопку, я соглашаюсь на обработку моих <a href="#">персональных данных</a></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="m-form__bottom-block">
+                            <button class="modal__send-form send-form" >
+                                <span>Скачать <br />каталог</span>
+                                
+                                <img src="assets/img/icons/white-arrow.svg" alt="" class="arrow">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                
+            </div>
+        </section>
+    </main>
+
+@@include('templates/footer.html')
+@@include('templates/foot.html')
