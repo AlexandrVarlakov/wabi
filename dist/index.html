@@ -385,13 +385,13 @@
                                         </button>
 
                                         <div class="realty-multi-select__drop">
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sd923" value="Свободное назначение" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sd923" value="Свободное назначение" data-option="#commerce-realty-type-1">
                                             <label for="realty-type-sd923" class="realty-multi-select__label">Свободное назначение</label>
 
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sdf2323r" value="Торговое помещение" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sdf2323r" value="Торговое помещение" data-option="#commerce-realty-type-2">
                                             <label for="realty-type-sdf2323r" class="realty-multi-select__label">Торговое помещение</label>
 
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-fsal3" value="Офис" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-fsal3" value="Офис" data-option="#commerce-realty-type-3">
                                             <label for="realty-type-fsal3" class="realty-multi-select__label">Офис</label>
                                         </div>
                                     </div>                                    
@@ -399,22 +399,22 @@
 
                                 <div class="ftp__inputs-group range-group">
                                     <div class="ftp__input-wrap">
-                                        <input type="tel" class="ftp__input currency" id="start-currency-12asd2" placeholder="1 255 $">
+                                        <input type="tel" class="ftp__input currency" id="start-currency-12asd2" placeholder="1 255 $" data-option="#commerce-min-price">
                                         <label for="start-currency-12asd2" class="ftp__input-label">от</label>
                                     </div>
                                     <div class="ftp__input-wrap">
-                                        <input type="tel" class="ftp__input currency" id="start-currency-13qwe3" placeholder="1 255 552$">
+                                        <input type="tel" class="ftp__input currency" id="start-currency-13qwe3" placeholder="1 255 552$" data-option="#commerce-max-price">
                                         <label for="start-currency-13qwe3" class="ftp__input-label">до</label>
                                     </div>
                                 </div>
 
                                 <div class="ftp__inputs-group range-group">
                                     <div class="ftp__input-wrap">
-                                        <input type="tel" class="ftp__input currency" id="start-area-12asd2" placeholder="102м2">
+                                        <input type="tel" class="ftp__input currency" id="start-area-12asd2" placeholder="102м2" data-option="#commerce-min-square">
                                         <label for="start-area-12asd2" class="ftp__input-label">от</label>
                                     </div>
                                     <div class="ftp__input-wrap">
-                                        <input type="tel" class="ftp__input currency" id="start-area-13qwe3" placeholder="1 022м2">
+                                        <input type="tel" class="ftp__input currency" id="start-area-13qwe3" placeholder="1 022м2" data-option="#commerce-max-square">
                                         <label for="start-area-13qwe3" class="ftp__input-label">до</label>
                                     </div>
                                 </div>
@@ -428,13 +428,13 @@
                                             </svg>
                                         </button>
                                         <div class="realty-multi-select__drop">
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-63341" value="Бодрум" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-63341" value="Бодрум" data-option="#commerce-realty-zone-1">
                                             <label for="realty-zones-63341" class="realty-multi-select__label">Бодрум</label>
 
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-2123123" value="Район 2" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-2123123" value="Район 2" data-option="#commerce-realty-zone-2">
                                             <label for="realty-zones-2123123" class="realty-multi-select__label">Район 2</label>
 
-                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-231" value="Район 3" >
+                                            <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-231" value="Район 3" data-option="#commerce-realty-zone-3">
                                             <label for="realty-zones-231" class="realty-multi-select__label">Район 3</label>
                                         </div>
                                     </div>
@@ -468,7 +468,7 @@
                                 <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
                             </svg>                                
                         </button>
-                        <a class="i-filters-panel__show-map" href="map.html">Показать на карте</a>
+                        <button class="i-filters-panel__show-map show-on-map" data-map-form="" data-action="/map/">Показать на карте</button>
                     </div>
                 </div>
 
@@ -479,6 +479,7 @@
         
 
         <form action="/sale" id="form-sale" class="hidden-form" style="display: block;">
+            
             <input type="checkbox" name="realty-type" value="Вилла" id="sale-realty-type-1">
             <input type="checkbox" name="realty-type" value="Квартира" id="sale-realty-type-2">
             <input type="checkbox" name="realty-type" value="Коттедж" id="sale-realty-type-3">
@@ -505,7 +506,7 @@
             <input type="checkbox" name="sale-tv" id="sale-tv">
             <input type="checkbox" name="sale-internet" id="sale-internet">
             <input type="checkbox" name="sale-phone" id="sale-phone">
-        </form>
+        </form>        
         <form action="/rent" id="form-rent" class="hidden-form" style="display: block;">
 
             <input type="checkbox" name="realty-type" value="Вилла" id="rent-realty-type-1">
@@ -536,7 +537,7 @@
             <input type="checkbox" name="rent-phone" id="rent-phone">
 
         </form>
-        <form action="/commerce" id="form-commerce" class="hidden-form" style="display: block">
+        <form action="/commerce" id="form-commerce" class="hidden-form" style="display: block;">
             <input type="checkbox" name="realty-type" value="Свободное назначение" id="commerce-realty-type-1">
             <input type="checkbox" name="realty-type" value="Торговое помещение" id="commerce-realty-type-2">
             <input type="checkbox" name="realty-type" value="Офис" id="commerce-realty-type-3">
@@ -544,6 +545,8 @@
             
             <input type="text" name="min-price" value="0" id="commerce-min-price">
             <input type="text" name="max-price" value="0" id="commerce-max-price">
+            <input type="text" name="min-square" value="0" id="commerce-min-square">
+            <input type="text" name="max-square" value="0" id="commerce-max-square">
 
             <input type="checkbox" name="realty-zones" value="1" id="commerce-realty-zone-1">
             <input type="checkbox" name="realty-zones" value="2" id="commerce-realty-zone-2">
@@ -560,8 +563,581 @@
             <input type="checkbox" name="commerce-internet" id="commerce-internet">
             <input type="checkbox" name="commerce-phone" id="commerce-phone">
         </form>
-
-
+        
+        <div class="filters-modal" data-modal-name="realty-filter">
+            <div class="filters-modal__system-panel">
+                <button class="filters-modal__close">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.29289" y1="14.849" x2="15.435" y2="0.70691" stroke="#839BA3" stroke-width="2"/>
+                        <line x1="15.4351" y1="14.8492" x2="1.29297" y2="0.707062" stroke="#839BA3" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        
+            <div class="filters-modal__tabs">
+                <button class="fmt active" data-target="#fms-filters-1" data-name="sale">Купить</button>
+                <button class="fmt" data-target="#fms-filters-2" data-name="rent">Снять</button>
+                <button class="fmt" data-target="#fms-filters-3" data-name="commerce">Коммерческая</button>
+            </div>
+        
+        
+        
+            <div class="fms-filters active" id="fms-filters-1">
+                <div class="fms-filters__main">
+                    <div class="fms-filters__block">
+                        <div class="realty-multi-select">
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+        
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sf932" value="Виллу" data-option="#sale-realty-type-1">
+                                <label for="realty-type-sf932" class="realty-multi-select__label">Виллу</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as9123" value="Квартиру" data-option="#sale-realty-type-2">
+                                <label for="realty-type-as9123" class="realty-multi-select__label">Квартиру</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as12" value="Коттедж" data-option="#sale-realty-type-3">
+                                <label for="realty-type-as12" class="realty-multi-select__label">Коттедж</label>
+                            </div>
+                        </div>
+        
+                        <div class="realty-multi-select" data-postfix="комн.">
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+                            <div class="realty-multi-select__drop squares">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as212" value="1"  data-option="#sale-realty-rooms-1">
+                                <label for="realty-rooms-as212" class="realty-multi-select__label">1</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as124b" value="2" data-option="#sale-realty-rooms-2">
+                                <label for="realty-rooms-as124b" class="realty-multi-select__label">2</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-s10213" value="3" data-option="#sale-realty-rooms-3">
+                                <label for="realty-rooms-s10213" class="realty-multi-select__label">3</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as100d" value="4" data-option="#sale-realty-rooms-4">
+                                <label for="realty-rooms-as100d" class="realty-multi-select__label">4</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-asd2e" value="5" data-option="#sale-realty-rooms-5">
+                                <label for="realty-rooms-asd2e" class="realty-multi-select__label">5</label>
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-sa1231" value="5+" data-option="#sale-realty-rooms-6">
+                                <label for="realty-rooms-sa1231" class="realty-multi-select__label">5+</label>
+                            </div>
+                        </div>
+        
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#sale-min-price">
+                            <label for="start-currency-asd82k" class="ftp__input-label">от</label>
+                        </div>
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#sale-max-price">
+                            <label for="start-currency-sdf21" class="ftp__input-label">до</label>
+                        </div>
+        
+                        <div class="realty-multi-select w-100" >
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf723" value="Бодрум" data-option="#sale-realty-zone-1">
+                                <label for="realty-zones-sdf723" class="realty-multi-select__label">Бодрум</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-vwq3" value="Район 2" data-option="#sale-realty-zone-2">
+                                <label for="realty-zones-vwq3" class="realty-multi-select__label">Район 2</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-kf2l23" value="Район 3" data-option="#sale-realty-zone-3">
+                                <label for="realty-zones-kf2l23" class="realty-multi-select__label">Район 3</label>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </div>
+        
+                <div class="fms-filters__deep">
+                    <div class="fms-filters__block">
+                        <div class="df-select-wrap">
+                            <label for="deal-type" class="for-select">Тип сделки</label>
+                            <select name="type" id="deal-type" class="select-df" data-option="#sale-deal-type">
+                                <option value="" selected="" disabled="">Тип сделки</option>
+                                <option value="Собственная застройка">Собственная застройка</option>
+                                <option value="Прямая">Прямая</option>
+                                <option value="Альтернативная">Альтернативная</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="rent-long" class="for-select">Срок аренды</label>
+                            <select name="rent-long" id="rent-long" class="select-df" data-option="#sale-rent-long">
+                                <option value="" selected="" disabled="">Срок аренды</option>
+                                <option value="5 минут">От года</option>
+                                <option value="До месяца">До месяца</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="sea-dist" class="for-select">До моря</label>
+                            <select name="sea-dist" id="sea-dist" class="select-df" data-option="#sale-sea-dist">
+                                <option value="" selected="" disabled="">Расстояние до моря</option>
+                                <option value="5 минут">5 минут</option>
+                                <option value="15 минут">15 минут</option>
+                                <option value="1 час">1 час</option>
+                            </select>
+                        </div>
+        
+        
+                    </div>
+                    <div class="fms-filters__block">
+                        <div class="fms-filters__checkbox-list">
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#sale-conditioner">
+                                <label for="cb-filter-1" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#sale-furniture">
+                                <label for="cb-filter-2" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#sale-internet">
+                                <label for="cb-filter-3" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#sale-kitchen-furniture">
+                                <label for="cb-filter-4" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#sale-tv">
+                                <label for="cb-filter-5" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
+                            </div>
+        
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#phone">
+                                <label for="cb-filter-6" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="fms-filters__button-block">
+                    <div class="fms-filters__f-btn-group">
+                        
+                        <button class="fms-filters__on-map show-on-map-mob" data-map-form="#form-sale" data-action="/map/sale" >
+                            На карте
+                        </button>
+                    </div>
+                    
+                    <div class="fms-filters__show-wrap">
+                        <button class="fms-filters__show" data-form="#form-sale">
+                            Показать объекты
+                        </button>
+                    </div>
+                    
+        
+                </div>
+        
+        
+            </div>
+        
+            <div class="fms-filters" id="fms-filters-2">
+                <div class="fms-filters__main">
+                    
+                    <div class="fms-filters__block">
+                        <div class="realty-multi-select">
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+        
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sf932" value="Виллу" data-option="#rent-realty-type-1">
+                                <label for="realty-type-sf932" class="realty-multi-select__label">Виллу</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as9123" value="Квартиру" data-option="#rent-realty-type-2">
+                                <label for="realty-type-as9123" class="realty-multi-select__label">Квартиру</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as12" value="Коттедж" data-option="#rent-realty-type-3">
+                                <label for="realty-type-as12" class="realty-multi-select__label">Коттедж</label>
+                            </div>
+                        </div>
+        
+                        <div class="realty-multi-select" data-postfix="комн.">
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+                            <div class="realty-multi-select__drop squares">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as212" value="1" data-option="#rent-realty-rooms-1">
+                                <label for="realty-rooms-as212" class="realty-multi-select__label">1</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as124b" value="2" data-option="#rent-realty-rooms-2">
+                                <label for="realty-rooms-as124b" class="realty-multi-select__label">2</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-s10213" value="3" data-option="#rent-realty-rooms-3">
+                                <label for="realty-rooms-s10213" class="realty-multi-select__label">3</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as100d" value="4" data-option="#rent-realty-rooms-4">
+                                <label for="realty-rooms-as100d" class="realty-multi-select__label">4</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-asd2e" value="5" data-option="#rent-realty-rooms-5">
+                                <label for="realty-rooms-asd2e" class="realty-multi-select__label">5</label>
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-sa1231" value="5+" data-option="#rent-realty-rooms-6">
+                                <label for="realty-rooms-sa1231" class="realty-multi-select__label">5+</label>
+                            </div>
+                        </div>
+        
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#rent-min-price">
+                            <label for="start-currency-asd82k" class="ftp__input-label">от</label>
+                        </div>
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#rent-max-price">
+                            <label for="start-currency-sdf21" class="ftp__input-label">до</label>
+                        </div>
+        
+                        <div class="realty-multi-select w-100" >
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf723" value="Бодрум" data-option="#rent-realty-zone-1">
+                                <label for="realty-zones-sdf723" class="realty-multi-select__label">Бодрум</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf72k" value="Район 2" data-option="#rent-realty-zone-2">
+                                <label for="realty-zones-sdf72k" class="realty-multi-select__label">Район 2</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-ag34121" value="Район 3" data-option="#rent-realty-zone-3">
+                                <label for="realty-zones-ag34121" class="realty-multi-select__label">Район 3</label>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </div>
+        
+                <div class="fms-filters__deep">
+                    <div class="fms-filters__block">
+                        <div class="df-select-wrap">
+                            <label for="deal-type" class="for-select">Тип сделки</label>
+                            <select name="type" id="deal-type" class="select-df" data-option="#rent-deal-type">
+                                <option value="" selected="" disabled="">Тип сделки</option>
+                                <option value="Собственная застройка">Собственная застройка</option>
+                                <option value="Прямая">Прямая</option>
+                                <option value="Альтернативная">Альтернативная</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="rent-long" class="for-select">Срок аренды</label>
+                            <select name="rent-long" id="rent-long" class="select-df" data-option="#rent-rent-long">
+                                <option value="" selected="" disabled="">Срок аренды</option>
+                                <option value="5 минут">От года</option>
+                                <option value="До месяца">До месяца</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="sea-dist" class="for-select">До моря</label>
+                            <select name="sea-dist" id="sea-dist" class="select-df" data-option="#rent-sea-dist">
+                                <option value="" selected="" disabled="">Расстояние до моря</option>
+                                <option value="5 минут">5 минут</option>
+                                <option value="15 минут">15 минут</option>
+                                <option value="1 час">1 час</option>
+                            </select>
+                        </div>
+        
+        
+                    </div>
+                    <div class="fms-filters__block">
+                        <div class="fms-filters__checkbox-list">
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#rent-conditioner">
+                                <label for="cb-filter-1" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#rent-furniture">
+                                <label for="cb-filter-2" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#rent-internet">
+                                <label for="cb-filter-3" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#rent-kitchen-furniture">
+                                <label for="cb-filter-4" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#rent-tv">
+                                <label for="cb-filter-5" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
+                            </div>
+        
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#rent-phone">
+                                <label for="cb-filter-6" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="fms-filters__button-block">
+                    <div class="fms-filters__f-btn-group">
+                        
+                        <button class="fms-filters__on-map show-on-map-mob" data-map-form="#form-rent" data-action="/map/rent">
+                            На карте
+                        </button>
+                    </div>
+                    
+                    <div class="fms-filters__show-wrap">
+                        <button class="fms-filters__show" data-form="#form-rent">
+                            Показать объекты
+                        </button>
+                    </div>
+                    
+        
+                </div>
+            </div>
+        
+            <div class="fms-filters" id="fms-filters-3">
+                <div class="fms-filters__main">            
+                    <div class="fms-filters__block">
+                        <div class="realty-multi-select">
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+        
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sskdjf" value="Свободное назначение" data-option="#commerce-realty-type-1">
+                                <label for="realty-type-sskdjf" class="realty-multi-select__label">Свободное назначение</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-k3j3r" value="Торговое помещение" data-option="#commerce-realty-type-2">
+                                <label for="realty-type-k3j3r" class="realty-multi-select__label">Торговое помещение</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-flksdfj3" value="Офис" data-option="#commerce-realty-type-3">
+                                <label for="realty-type-flksdfj3" class="realty-multi-select__label">Офис</label>
+                            </div>
+                        </div>
+        
+                        
+        
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#commerce-min-price">
+                            <label for="start-currency-asd82k" class="ftp__input-label">от</label>
+                        </div>
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#commerce-max-price">
+                            <label for="start-currency-sdf21" class="ftp__input-label">до</label>
+                        </div>
+        
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-area-asd82k" placeholder="105м2" data-option="#commerce-min-square">
+                            <label for="start-area-asd82k" class="ftp__input-label">от</label>
+                        </div>
+                        <div class="ftp__input-wrap">
+                            <input type="tel" class="ftp__input currency" id="start-area-sdf21" placeholder="2005м2" data-option="#commerce-max-square">
+                            <label for="start-area-sdf21" class="ftp__input-label">до</label>
+                        </div>
+        
+                        <div class="realty-multi-select w-100" >
+                            <button class="rms-button">
+                                <span class="rms-button__value"></span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
+                                    <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
+                                </svg>
+                            </button>
+                            <div class="realty-multi-select__drop">
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-flkwer" value="Бодрум" data-option="#commerce-realty-zone-1">
+                                <label for="realty-type-flkwer" class="realty-multi-select__label">Бодрум</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf72k" value="Район 2" data-option="#commerce-realty-zone-2">
+                                <label for="realty-zones-sdf72k" class="realty-multi-select__label">Район 2</label>
+        
+                                <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sadf23" value="Район 3" data-option="#commerce-realty-zone-3">
+                                <label for="realty-zones-sadf23" class="realty-multi-select__label">Район 3</label>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </div>
+        
+                <div class="fms-filters__deep">
+                    <div class="fms-filters__block">
+                        <div class="df-select-wrap">
+                            <label for="deal-type" class="for-select">Тип сделки</label>
+                            <select name="type" id="deal-type" class="select-df" data-option="#commerce-deal-type">
+                                <option value="" selected="" disabled="">Тип сделки</option>
+                                <option value="Собственная застройка">Собственная застройка</option>
+                                <option value="Прямая">Прямая</option>
+                                <option value="Альтернативная">Альтернативная</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="rent-long" class="for-select">Срок аренды</label>
+                            <select name="rent-long" id="rent-long" class="select-df" data-option="#commerce-rent-long">
+                                <option value="" selected="" disabled="">Срок аренды</option>
+                                <option value="5 минут">От года</option>
+                                <option value="До месяца">До месяца</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+        
+                        <div class="df-select-wrap">
+                            <label for="sea-dist" class="for-select">До моря</label>
+                            <select name="sea-dist" id="sea-dist" class="select-df" data-option="#commerce-sea-dist">
+                                <option value="" selected="" disabled="">Расстояние до моря</option>
+                                <option value="5 минут">5 минут</option>
+                                <option value="15 минут">15 минут</option>
+                                <option value="1 час">1 час</option>
+                            </select>
+                        </div>
+        
+        
+                    </div>
+                    <div class="fms-filters__block">
+                        <div class="fms-filters__checkbox-list">
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#commerce-conditioner">
+                                <label for="cb-filter-1" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#commerce-furniture">
+                                <label for="cb-filter-2" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#commerce-internet">
+                                <label for="cb-filter-3" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#commerce-kitchen-furniture">
+                                <label for="cb-filter-4" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
+                            </div>
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#commerce-tv">
+                                <label for="cb-filter-5" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
+                            </div>
+        
+        
+                            <div class="custom-cb filter">
+                                <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#commerce-phone">
+                                <label for="cb-filter-6" class="custom-cb__box">
+                                    <img src="assets/img/icons/checkbox-arrow.svg" alt="">
+                                </label>
+                                <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="fms-filters__button-block">
+                    <div class="fms-filters__f-btn-group">
+                        
+                        <button class="fms-filters__on-map show-on-map-mob" data-map-form="#form-commerce" data-action="/map/commerce">
+                            На карте
+                        </button>
+                    </div>
+                    
+                    <div class="fms-filters__show-wrap">
+                        <button class="fms-filters__show">
+                            Показать объекты
+                        </button>
+                    </div>
+                    
+        
+                </div>
+            </div>
+        
+        
+        </div>
 
         <section class="section">
             <div class="section__inner">
@@ -4807,8 +5383,7 @@
         </section>
     </main>
 
-
-
+    
 <div class="modal" data-modal-name="contact-us">
     <div class="modal__close">
         <div></div>
@@ -5008,586 +5583,9 @@
 </div>
 
 
-<div class="filters-modal" data-modal-name="realty-filter">
-    <div class="filters-modal__system-panel">
-        <button class="filters-modal__close">
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="1.29289" y1="14.849" x2="15.435" y2="0.70691" stroke="#839BA3" stroke-width="2"/>
-                <line x1="15.4351" y1="14.8492" x2="1.29297" y2="0.707062" stroke="#839BA3" stroke-width="2"/>
-            </svg>
-        </button>
-    </div>
 
-    <div class="filters-modal__tabs">
-        <button class="fmt active" data-target="#fms-filters-1" data-name="sale">Купить</button>
-        <button class="fmt" data-target="#fms-filters-2" data-name="rent">Снять</button>
-        <button class="fmt" data-target="#fms-filters-3" data-name="commerce">Коммерческая</button>
-    </div>
 
 
-
-    <div class="fms-filters active" id="fms-filters-1">
-        <div class="fms-filters__main">
-            <div class="fms-filters__block">
-                <div class="realty-multi-select">
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sf932" value="Виллу" data-option="#sale-realty-type-1">
-                        <label for="realty-type-sf932" class="realty-multi-select__label">Виллу</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as9123" value="Квартиру" data-option="#sale-realty-type-2">
-                        <label for="realty-type-as9123" class="realty-multi-select__label">Квартиру</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as12" value="Коттедж" data-option="#sale-realty-type-3">
-                        <label for="realty-type-as12" class="realty-multi-select__label">Коттедж</label>
-                    </div>
-                </div>
-
-                <div class="realty-multi-select" data-postfix="комн.">
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-                    <div class="realty-multi-select__drop squares">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as212" value="1"  data-option="#sale-realty-rooms-1">
-                        <label for="realty-rooms-as212" class="realty-multi-select__label">1</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as124b" value="2" data-option="#sale-realty-rooms-2">
-                        <label for="realty-rooms-as124b" class="realty-multi-select__label">2</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-s10213" value="3" data-option="#sale-realty-rooms-3">
-                        <label for="realty-rooms-s10213" class="realty-multi-select__label">3</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as100d" value="4" data-option="#sale-realty-rooms-4">
-                        <label for="realty-rooms-as100d" class="realty-multi-select__label">4</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-asd2e" value="5" data-option="#sale-realty-rooms-5">
-                        <label for="realty-rooms-asd2e" class="realty-multi-select__label">5</label>
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-sa1231" value="5+" data-option="#sale-realty-rooms-6">
-                        <label for="realty-rooms-sa1231" class="realty-multi-select__label">5+</label>
-                    </div>
-                </div>
-
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#sale-min-price">
-                    <label for="start-currency-asd82k" class="ftp__input-label">от</label>
-                </div>
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#sale-max-price">
-                    <label for="start-currency-sdf21" class="ftp__input-label">до</label>
-                </div>
-
-                <div class="realty-multi-select w-100" >
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf723" value="Бодрум" data-option="#sale-realty-zone-1">
-                        <label for="realty-zones-sdf723" class="realty-multi-select__label">Бодрум</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-vwq3" value="Район 2" data-option="#sale-realty-zone-2">
-                        <label for="realty-zones-vwq3" class="realty-multi-select__label">Район 2</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-kf2l23" value="Район 3" data-option="#sale-realty-zone-3">
-                        <label for="realty-zones-kf2l23" class="realty-multi-select__label">Район 3</label>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="fms-filters__deep">
-            <div class="fms-filters__block">
-                <div class="df-select-wrap">
-                    <label for="deal-type" class="for-select">Тип сделки</label>
-                    <select name="type" id="deal-type" class="select-df" data-option="#sale-deal-type">
-                        <option value="" selected="" disabled="">Тип сделки</option>
-                        <option value="Собственная застройка">Собственная застройка</option>
-                        <option value="Прямая">Прямая</option>
-                        <option value="Альтернативная">Альтернативная</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="rent-long" class="for-select">Срок аренды</label>
-                    <select name="rent-long" id="rent-long" class="select-df" data-option="#sale-rent-long">
-                        <option value="" selected="" disabled="">Срок аренды</option>
-                        <option value="5 минут">От года</option>
-                        <option value="До месяца">До месяца</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="sea-dist" class="for-select">До моря</label>
-                    <select name="sea-dist" id="sea-dist" class="select-df" data-option="#sale-sea-dist">
-                        <option value="" selected="" disabled="">Расстояние до моря</option>
-                        <option value="5 минут">5 минут</option>
-                        <option value="15 минут">15 минут</option>
-                        <option value="1 час">1 час</option>
-                    </select>
-                </div>
-
-
-            </div>
-            <div class="fms-filters__block">
-                <div class="fms-filters__checkbox-list">
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#sale-conditioner">
-                        <label for="cb-filter-1" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#sale-furniture">
-                        <label for="cb-filter-2" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#sale-internet">
-                        <label for="cb-filter-3" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#sale-kitchen-furniture">
-                        <label for="cb-filter-4" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#sale-tv">
-                        <label for="cb-filter-5" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
-                    </div>
-
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#phone">
-                        <label for="cb-filter-6" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="fms-filters__button-block">
-            <div class="fms-filters__f-btn-group">
-                <div class="fms-filters__reset-wrap">
-                    <button class="fms-filters__reset">Сбросить фильтр</button>
-                </div>
-                <button class="fms-filters__on-map">
-                    На карте
-                </button>
-            </div>
-            
-            <div class="fms-filters__show-wrap">
-                <button class="fms-filters__show" data-form="#form-sale">
-                    Показать объекты
-                </button>
-            </div>
-            
-
-        </div>
-
-
-    </div>
-
-    <div class="fms-filters" id="fms-filters-2">
-        <div class="fms-filters__main">
-            
-            <div class="fms-filters__block">
-                <div class="realty-multi-select">
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sf932" value="Виллу" data-option="#rent-realty-type-1">
-                        <label for="realty-type-sf932" class="realty-multi-select__label">Виллу</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as9123" value="Квартиру" data-option="#rent-realty-type-2">
-                        <label for="realty-type-as9123" class="realty-multi-select__label">Квартиру</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-as12" value="Коттедж" data-option="#rent-realty-type-3">
-                        <label for="realty-type-as12" class="realty-multi-select__label">Коттедж</label>
-                    </div>
-                </div>
-
-                <div class="realty-multi-select" data-postfix="комн.">
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-                    <div class="realty-multi-select__drop squares">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as212" value="1" data-option="#rent-realty-rooms-1">
-                        <label for="realty-rooms-as212" class="realty-multi-select__label">1</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as124b" value="2" data-option="#rent-realty-rooms-2">
-                        <label for="realty-rooms-as124b" class="realty-multi-select__label">2</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-s10213" value="3" data-option="#rent-realty-rooms-3">
-                        <label for="realty-rooms-s10213" class="realty-multi-select__label">3</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-as100d" value="4" data-option="#rent-realty-rooms-4">
-                        <label for="realty-rooms-as100d" class="realty-multi-select__label">4</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-asd2e" value="5" data-option="#rent-realty-rooms-5">
-                        <label for="realty-rooms-asd2e" class="realty-multi-select__label">5</label>
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-rooms-sa1231" value="5+" data-option="#rent-realty-rooms-6">
-                        <label for="realty-rooms-sa1231" class="realty-multi-select__label">5+</label>
-                    </div>
-                </div>
-
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#rent-min-price">
-                    <label for="start-currency-asd82k" class="ftp__input-label">от</label>
-                </div>
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#rent-max-price">
-                    <label for="start-currency-sdf21" class="ftp__input-label">до</label>
-                </div>
-
-                <div class="realty-multi-select w-100" >
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf723" value="Бодрум" data-option="#rent-realty-zone-1">
-                        <label for="realty-zones-sdf723" class="realty-multi-select__label">Бодрум</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf72k" value="Район 2" data-option="#rent-realty-zone-2">
-                        <label for="realty-zones-sdf72k" class="realty-multi-select__label">Район 2</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-ag34121" value="Район 3" data-option="#rent-realty-zone-3">
-                        <label for="realty-zones-ag34121" class="realty-multi-select__label">Район 3</label>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="fms-filters__deep">
-            <div class="fms-filters__block">
-                <div class="df-select-wrap">
-                    <label for="deal-type" class="for-select">Тип сделки</label>
-                    <select name="type" id="deal-type" class="select-df" data-option="#rent-deal-type">
-                        <option value="" selected="" disabled="">Тип сделки</option>
-                        <option value="Собственная застройка">Собственная застройка</option>
-                        <option value="Прямая">Прямая</option>
-                        <option value="Альтернативная">Альтернативная</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="rent-long" class="for-select">Срок аренды</label>
-                    <select name="rent-long" id="rent-long" class="select-df" data-option="#rent-rent-long">
-                        <option value="" selected="" disabled="">Срок аренды</option>
-                        <option value="5 минут">От года</option>
-                        <option value="До месяца">До месяца</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="sea-dist" class="for-select">До моря</label>
-                    <select name="sea-dist" id="sea-dist" class="select-df" data-option="#rent-sea-dist">
-                        <option value="" selected="" disabled="">Расстояние до моря</option>
-                        <option value="5 минут">5 минут</option>
-                        <option value="15 минут">15 минут</option>
-                        <option value="1 час">1 час</option>
-                    </select>
-                </div>
-
-
-            </div>
-            <div class="fms-filters__block">
-                <div class="fms-filters__checkbox-list">
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#rent-conditioner">
-                        <label for="cb-filter-1" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#rent-furniture">
-                        <label for="cb-filter-2" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#rent-internet">
-                        <label for="cb-filter-3" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#rent-kitchen-furniture">
-                        <label for="cb-filter-4" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#rent-tv">
-                        <label for="cb-filter-5" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
-                    </div>
-
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#rent-phone">
-                        <label for="cb-filter-6" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="fms-filters__button-block">
-            <div class="fms-filters__f-btn-group">
-                <div class="fms-filters__reset-wrap">
-                    <button class="fms-filters__reset">Сбросить фильтр</button>
-                </div>
-                <button class="fms-filters__on-map">
-                    На карте
-                </button>
-            </div>
-            
-            <div class="fms-filters__show-wrap">
-                <button class="fms-filters__show" data-form="#form-rent">
-                    Показать объекты
-                </button>
-            </div>
-            
-
-        </div>
-    </div>
-
-    <div class="fms-filters" id="fms-filters-3">
-        <div class="fms-filters__main">            
-            <div class="fms-filters__block">
-                <div class="realty-multi-select">
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-sskdjf" value="Свободное назначение" data-option="#commerce-realty-type-1">
-                        <label for="realty-type-sskdjf" class="realty-multi-select__label">Свободное назначение</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-k3j3r" value="Торговое помещение" data-option="#commerce-realty-type-2">
-                        <label for="realty-type-k3j3r" class="realty-multi-select__label">Торговое помещение</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-flksdfj3" value="Офис" data-option="#commerce-realty-type-3">
-                        <label for="realty-type-flksdfj3" class="realty-multi-select__label">Офис</label>
-                    </div>
-                </div>
-
-                
-
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-asd82k" placeholder="1 255 $" data-option="#commerce-min-price">
-                    <label for="start-currency-asd82k" class="ftp__input-label">от</label>
-                </div>
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-currency-sdf21" placeholder="1 255 552$" data-option="#commerce-max-price">
-                    <label for="start-currency-sdf21" class="ftp__input-label">до</label>
-                </div>
-
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-area-asd82k" placeholder="105м2" data-option="#commerce-min-square">
-                    <label for="start-area-asd82k" class="ftp__input-label">от</label>
-                </div>
-                <div class="ftp__input-wrap">
-                    <input type="tel" class="ftp__input currency" id="start-area-sdf21" placeholder="2005м2" data-option="#commerce-max-square">
-                    <label for="start-area-sdf21" class="ftp__input-label">до</label>
-                </div>
-
-                <div class="realty-multi-select w-100" >
-                    <button class="rms-button">
-                        <span class="rms-button__value"></span>
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="rms-button__arrow">
-                            <path d="M1.5 6.26025L7 11.7603L12.5 6.26025" stroke="black" stroke-opacity="0.7"/>
-                        </svg>
-                    </button>
-                    <div class="realty-multi-select__drop">
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-type-flkwer" value="Бодрум" data-option="#commerce-realty-zone-1">
-                        <label for="realty-type-flkwer" class="realty-multi-select__label">Бодрум</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sdf72k" value="Район 2" data-option="#commerce-realty-zone-2">
-                        <label for="realty-zones-sdf72k" class="realty-multi-select__label">Район 2</label>
-
-                        <input type="checkbox" class="realty-multi-select__checkbox" id="realty-zones-sadf23" value="Район 3" data-option="#commerce-realty-zone-3">
-                        <label for="realty-zones-sadf23" class="realty-multi-select__label">Район 3</label>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="fms-filters__deep">
-            <div class="fms-filters__block">
-                <div class="df-select-wrap">
-                    <label for="deal-type" class="for-select">Тип сделки</label>
-                    <select name="type" id="deal-type" class="select-df" data-option="#commerce-deal-type">
-                        <option value="" selected="" disabled="">Тип сделки</option>
-                        <option value="Собственная застройка">Собственная застройка</option>
-                        <option value="Прямая">Прямая</option>
-                        <option value="Альтернативная">Альтернативная</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="rent-long" class="for-select">Срок аренды</label>
-                    <select name="rent-long" id="rent-long" class="select-df" data-option="#commerce-rent-long">
-                        <option value="" selected="" disabled="">Срок аренды</option>
-                        <option value="5 минут">От года</option>
-                        <option value="До месяца">До месяца</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-                </div>
-
-                <div class="df-select-wrap">
-                    <label for="sea-dist" class="for-select">До моря</label>
-                    <select name="sea-dist" id="sea-dist" class="select-df" data-option="#commerce-sea-dist">
-                        <option value="" selected="" disabled="">Расстояние до моря</option>
-                        <option value="5 минут">5 минут</option>
-                        <option value="15 минут">15 минут</option>
-                        <option value="1 час">1 час</option>
-                    </select>
-                </div>
-
-
-            </div>
-            <div class="fms-filters__block">
-                <div class="fms-filters__checkbox-list">
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-1" class="custom-cb__cb" data-option="#commerce-conditioner">
-                        <label for="cb-filter-1" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-1">Кондиционер</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-2" class="custom-cb__cb" data-option="#commerce-furniture">
-                        <label for="cb-filter-2" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-2">Мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-3" class="custom-cb__cb" data-option="#commerce-internet">
-                        <label for="cb-filter-3" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-3">Интернет</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-4" class="custom-cb__cb" data-option="#commerce-kitchen-furniture">
-                        <label for="cb-filter-4" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-4">Кухонная мебель</label>
-                    </div>
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-5" class="custom-cb__cb" data-option="#commerce-tv">
-                        <label for="cb-filter-5" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-5">Телевизор</label>
-                    </div>
-
-
-                    <div class="custom-cb filter">
-                        <input type="checkbox" name="approve" id="cb-filter-6" class="custom-cb__cb" data-option="#commerce-phone">
-                        <label for="cb-filter-6" class="custom-cb__box">
-                            <img src="assets/img/icons/checkbox-arrow.svg" alt="">
-                        </label>
-                        <label class="custom-cb-filter-text" for="cb-filter-6">Телефон</label>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="fms-filters__button-block">
-            <div class="fms-filters__f-btn-group">
-                <div class="fms-filters__reset-wrap">
-                    <button class="fms-filters__reset">Сбросить фильтр</button>
-                </div>
-                <button class="fms-filters__on-map">
-                    На карте
-                </button>
-            </div>
-            
-            <div class="fms-filters__show-wrap">
-                <button class="fms-filters__show">
-                    Показать объекты
-                </button>
-            </div>
-            
-
-        </div>
-    </div>
-
-
-</div>
 
 
 <footer class="footer">

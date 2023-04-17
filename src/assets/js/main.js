@@ -630,6 +630,7 @@ function checkZone(){
 const ftpTabs = document.querySelectorAll('.ftp__tab');
 const moreFilters = document.querySelector('.i-filters-panel__more-filters');
 
+
 if ( ftpTabs.length ){
     ftpTabs.forEach( tab => {
         tab.addEventListener('click', function(){
@@ -644,6 +645,14 @@ if ( ftpTabs.length ){
                 activeTab.classList.remove('active');
                 this.classList.add('active');
                 moreFilters.setAttribute('data-target', newTargetName);
+
+                const formLink = '#form-' + this.getAttribute('data-target');
+
+                let showOnMapBtns = document.querySelectorAll('.show-on-map');
+                
+                showOnMapBtns.forEach( btn => {
+                    btn.setAttribute('data-map-form', formLink);
+                })
             }
 
         })
@@ -657,6 +666,28 @@ function ftpTabsInit(){
     if ( activeTab ){        
         const activeTab = document.querySelector('.ftp__tab.active');
         moreFilters.setAttribute('data-target', activeTab.getAttribute('data-target'));
+
+        let showOnMapBtns = document.querySelectorAll('.show-on-map');
+
+        showOnMapBtns.forEach( btn => {
+
+            const formLink = '#form-' + activeTab.getAttribute('data-target');
+
+            btn.setAttribute('data-map-form', formLink);
+
+            btn.addEventListener('click', function(){
+                let form = document.querySelector(formLink);
+                let action = this.getAttribute('data-action');
+
+                const activeTab = document.querySelector('.ftp__tab.active');
+
+                form.setAttribute('action', action + activeTab.getAttribute('data-target'));
+                form.submit();                
+            })
+
+        } )
+
+        
     }
 
 }
@@ -1005,6 +1036,7 @@ if ( callFiltersBtns.length ){
 
 
 
+
 const spoilerHeader = document.querySelectorAll('.spoiler-header');
 
 
@@ -1127,6 +1159,22 @@ if ( spoilerHeader.length ){
 }
 
 
+let showOnMapBtnsMob = document.querySelectorAll('.show-on-map-mob');
+
+showOnMapBtnsMob.forEach( btn => {
+    btn.addEventListener('click', function(){
+        const formLink = this.getAttribute('data-map-form');
+        const form = document.querySelector(formLink);
+        const action = this.getAttribute('data-action');
+        form.setAttribute('action', action);
+        form.submit();                
+    })
+    
+} )
+
+
+
+
 const filterModalTabs = document.querySelectorAll('.fmt');
 
 if ( filterModalTabs.length ){
@@ -1142,6 +1190,11 @@ if ( filterModalTabs.length ){
                 newActiveSheet.classList.add('active');
                 this.classList.add('active');
             }
+
+
+            
+            
+
         })
     })
 }
@@ -1552,3 +1605,12 @@ if ( visibleFilterCheckboxes.length ){
     } )
 }
 
+const sortSelects = document.querySelectorAll('.sort-select');
+
+sortSelects.forEach( select => {
+    select.addEventListener('change', function(){
+        const targetFormLink = this.getAttribute('data-sort-form');
+        form = document.querySelector(targetFormLink);
+        form.querySelector('input[name="sortBy"]').value = this.value
+    })
+} )
