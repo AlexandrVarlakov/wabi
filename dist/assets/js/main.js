@@ -1173,6 +1173,18 @@ showOnMapBtnsMob.forEach( btn => {
 } )
 
 
+let showOnListBtnsMob = document.querySelectorAll('button[data-list-form]');
+
+showOnListBtnsMob.forEach( btn => {
+    btn.addEventListener('click', function(){
+        const formLink = this.getAttribute('data-list-form');
+        const form = document.querySelector(formLink);
+        const action = this.getAttribute('data-action');
+        form.setAttribute('action', action);
+        form.submit();                
+    })
+    
+} )
 
 
 const filterModalTabs = document.querySelectorAll('.fmt');
