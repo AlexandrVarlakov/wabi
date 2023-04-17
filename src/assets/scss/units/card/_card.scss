@@ -444,6 +444,7 @@
         @media (min-width: 1600px){
            
             grid-column: span 3;
+            
             &:last-of-type{
                 justify-content: flex-end;
             }
@@ -618,6 +619,9 @@
             grid-column: span 3;
 
             &:nth-of-type(even){
+                //justify-content: flex-end;
+            }
+            &:last-of-type{
                 justify-content: flex-end;
             }
         }
@@ -629,6 +633,10 @@
 
         @media (min-width: 1600px){
             grid-column: span 3;
+
+            &:first-of-type{
+                justify-content: flex-start;
+            }
         }
     }
 
