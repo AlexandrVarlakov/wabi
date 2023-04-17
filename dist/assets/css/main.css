@@ -3339,6 +3339,10 @@ a.close {
   display: inline-block;
 }
 
+.hidden-form {
+  display: none;
+}
+
 .header {
   padding: 0 20px;
   width: 100%;

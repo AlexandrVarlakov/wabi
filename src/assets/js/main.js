@@ -1216,8 +1216,10 @@ const realtyList = [
 
 const map = document.querySelector('.map');
 var realtyMap;
-ymaps.ready(initMap);
 
+if ( map ){
+    ymaps.ready(initMap);
+}
 
 function initMap(){
     realtyMap = new ymaps.Map('map', {
@@ -1476,4 +1478,77 @@ MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
    
 }
 
+
+
+let visibleFilterCheckboxes = document.querySelectorAll('input[data-option]');
+let formSubmits = document.querySelectorAll('button[data-form]');
+let filterSelects = document.querySelectorAll('select[data-option]');
+
+
+if ( formSubmits.length ){
+
+    formSubmits.forEach( btn => {
+        btn.addEventListener('click', function(){
+            let targetForm = document.querySelector(this.getAttribute('data-form'));
+            targetForm.submit();
+        })
+    } )
+
+}
+
+if ( filterSelects.length ) {
+    filterSelects.forEach( sel => {
+        let target = document.querySelector( sel.getAttribute('data-option') );
+        target.value = sel.value;
+        sel.addEventListener( 'change', function(){
+            target.value = this.value;
+        })
+    } ) 
+
+}
+
+
+if ( visibleFilterCheckboxes.length ){
+    visibleFilterCheckboxes.forEach( cb => {
+
+    
+
+        let target = document.querySelector( cb.getAttribute('data-option') );        
+        
+        switch ( this.type ){
+            case "checkbox":
+                if ( this.checked ) { 
+                    target.checked = true;
+                } else{
+                    target.checked = false;
+                }
+            break;
+            case "text", "tel": 
+                target.value = this.value
+            break
+        }
+    
+
+
+
+
+    cb.addEventListener('change', function(){
+
+        let target = document.querySelector( this.getAttribute('data-option') );        
+        
+        switch ( this.type ){
+            case "checkbox":
+                if ( this.checked ) { 
+                    target.checked = true;
+                } else{
+                    target.checked = false;
+                }
+            break;
+            case "text", "tel": 
+                target.value = this.value
+            break
+        }
+    })
+    } )
+}
 
