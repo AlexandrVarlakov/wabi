@@ -681,7 +681,7 @@ function ftpTabsInit(){
 
                 const activeTab = document.querySelector('.ftp__tab.active');
 
-                form.setAttribute('action', action + activeTab.getAttribute('data-target'));
+                form.setAttribute('action', action);
                 form.submit();                
             })
 
