@@ -267,6 +267,7 @@ if ( contactTabs.length ){
 
 }
 
+
 const filterSliderBtn = document.querySelectorAll('.filter-btn');
 if ( filterSliderBtn.length ){
     filterSliderBtn.forEach( btn => {
@@ -277,31 +278,48 @@ if ( filterSliderBtn.length ){
                 
                 let parentWrap = this.closest('.realty-slider-outer-wrap');
 
-                let currentActiveBtn = parentWrap.querySelector('.filter-btn.active');
+                if ( parentWrap ){
+                    let currentActiveBtn = parentWrap.querySelector('.filter-btn.active');
 
-                this.classList.add('active');
-                currentActiveBtn.classList.remove('active');
+                    this.classList.add('active');
+                    currentActiveBtn.classList.remove('active');
 
-                const selectedSlides  = parentWrap.querySelectorAll('.swiper-slide.selected');
-                selectedSlides.forEach( ss => {
-                    ss.classList.remove('selected');
-                } )
+                    const selectedSlides  = parentWrap.querySelectorAll('.swiper-slide.selected');
+                    selectedSlides.forEach( ss => {
+                        ss.classList.remove('selected');
+                    } )
 
 
-                const filterValue = this.getAttribute('data-filter');
-                const newSelected = parentWrap.querySelectorAll('.swiper-slide[data-filter=' +filterValue+ ']');
-                newSelected.forEach( ns => {
-                    ns.classList.add('selected');
+                    const filterValue = this.getAttribute('data-filter');
+                    const newSelected = parentWrap.querySelectorAll('.swiper-slide[data-filter=' +filterValue+ ']');
+                    newSelected.forEach( ns => {
+                        ns.classList.add('selected');
 
-                    console.log(popularRealtySlider.slides.length);
-                    //console.log(rentRealtySlider.slides.length);
-                    //rentRealtySlider.update();
-                    //popularRealtySlider.update()
-                    if (popularRealtySlider.slides.length) popularRealtySlider.update();
-                    if (rentRealtySlider.slides.length) rentRealtySlider.update();
-                    if (salesRealtySlider.slides.length) salesRealtySlider.update();
-                    
-                } )
+                        console.log(popularRealtySlider.slides.length);
+                        //console.log(rentRealtySlider.slides.length);
+                        //rentRealtySlider.update();
+                        //popularRealtySlider.update()
+                        if (popularRealtySlider.slides.length) popularRealtySlider.update();
+                        if (rentRealtySlider.slides.length) rentRealtySlider.update();
+                        if (salesRealtySlider.slides.length) salesRealtySlider.update();
+                        
+                    } )
+                } else{
+                    let parentWrap = this.closest('.slider-filter');
+
+                    let currentActiveBtn = parentWrap.querySelector('.filter-btn.active');
+
+                    this.classList.add('active');
+
+                    let typeCard = this.getAttribute('data-type');
+
+                    currentActiveBtn.classList.remove('active');
+
+                    const realtyContainer = document.querySelector('.realty-container');
+                    realtyContainer.setAttribute('data-type', typeCard);
+                }
+                
+                
             }
 
         })
@@ -1214,7 +1232,7 @@ if ( filterModalTabs.length ){
 const realtyList = [
     {
         coordinates: [55.68267782261003,37.48201731640626],
-        hint: 'Текст сообщения',
+       
         realty: {
             link: 'realty-page.html',
             promoState: 'Лучшее предложение',
@@ -1236,7 +1254,7 @@ const realtyList = [
 
     {
         coordinates: [55.58267782261003, 37.48201731640626],
-        hint: 'Текст сообщения',
+        
         realty: {
             link: 'realty-page.html',
             promoState: 'Лучшее предложение',
@@ -1258,7 +1276,7 @@ const realtyList = [
 
     {
         coordinates: [55.88267782261003,37.58201731640626],
-        hint: 'Текст сообщения',
+        
         realty: {
             link: 'realty-page.html',
             promoState: 'Лучшее предложение',
@@ -1284,6 +1302,7 @@ var realtyMap;
 
 if ( map ){
     ymaps.ready(initMap);
+    
 }
 
 function initMap(){
@@ -1298,7 +1317,14 @@ function initMap(){
     function createPlaceMark(realtyData){
         return new ymaps.Placemark(
         // Координаты метки
+
+            
+
         realtyData.coordinates , {
+
+            
+
+
         // Свойства
         // Текст метки
                 hintContent: realtyData.hint,
@@ -1455,7 +1481,13 @@ MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
              this.applyElementOffset();
              this.events.fire('shapechange');
         },
+
+
+        
 /**
+ * 
+ * 
+ * 
 * Сдвигаем балун, чтобы середина указывала на точку привязки.
 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
 * @function
@@ -1479,6 +1511,7 @@ MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
 
                 onCloseClick: function (e) {
                        e.preventDefault();
+                       
                        this.events.fire('userclose');
                 },
 
@@ -1518,7 +1551,7 @@ MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 }
          }),
 
-
+         
 
 // Создание вложенного макета содержимого балуна.
          MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -1533,6 +1566,12 @@ MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
         realtyList.forEach( rl => {
             let point = createPlaceMark(rl);   
             realtyMap.geoObjects.add(point);
+
+
+            /*point.events.add('mouseenter', function (e) {
+                e._cache.target.balloon.open();                
+            });*/
+            
         } )    
 
         //let ttt = createPlaceMark(realtyList[0]);

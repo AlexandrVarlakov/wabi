@@ -5927,6 +5927,30 @@ a.close {
   grid-gap: 10px;
 }
 
+.realty-container[data-type=all] .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.realty-container[data-type=partners] .card {
+  display: none;
+}
+.realty-container[data-type=partners] .card[data-type=partners] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.realty-container[data-type=own] .card {
+  display: none;
+}
+.realty-container[data-type=own] .card[data-type=own] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card__text-block {
   display: grid;
   grid-template-columns: 1fr 1fr;

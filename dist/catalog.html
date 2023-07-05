@@ -187,8 +187,8 @@
                     <h1 class="section__title">Продажа</h1>
 
                     <div class="slider-filter">
-                        <a class="filter-link active" href="#">Собственные</a>
-                        <a class="filter-link" href="#">Партнерские</a>
+                        <button class="filter-btn active" data-type="owns">Собственные</button>
+                        <button class="filter-btn" data-type="partners">Партнерские</button>
                     </div>
 
                     <a href="#" class="all">Все</a>
@@ -203,7 +203,7 @@
                     
 
 
-                    <div class="realty-container">
+                    <div class="realty-container" data-type="partners">
 
                         <div class="realty-filter-block">
 
@@ -387,7 +387,7 @@
 
                         </div>
 
-                        <form action="/sale" id="form-sale" class="hidden-form" style="display: block;">
+                        <form action="/sale" id="form-sale" class="hidden-form" >
                             <input type="text" name="sortBy" value="" >
                             <input type="checkbox" name="realty-type" value="Вилла" id="sale-realty-type-1">
                             <input type="checkbox" name="realty-type" value="Квартира" id="sale-realty-type-2">
@@ -421,7 +421,7 @@
                             <input type="checkbox" name="sale-internet" id="sale-internet">
                             <input type="checkbox" name="sale-phone" id="sale-phone">
                         </form>        
-                        <form action="/rent" id="form-rent" class="hidden-form" style="display: block;">
+                        <form action="/rent" id="form-rent" class="hidden-form" >
                 
                             <input type="checkbox" name="realty-type" value="Вилла" id="rent-realty-type-1">
                             <input type="checkbox" name="realty-type" value="Квартира" id="rent-realty-type-2">
@@ -451,7 +451,7 @@
                             <input type="checkbox" name="rent-phone" id="rent-phone">
                 
                         </form>
-                        <form action="/commerce" id="form-commerce" class="hidden-form" style="display: block;">
+                        <form action="/commerce" id="form-commerce" class="hidden-form">
                             <input type="checkbox" name="realty-type" value="Свободное назначение" id="commerce-realty-type-1">
                             <input type="checkbox" name="realty-type" value="Торговое помещение" id="commerce-realty-type-2">
                             <input type="checkbox" name="realty-type" value="Офис" id="commerce-realty-type-3">
@@ -476,7 +476,7 @@
                             <input type="checkbox" name="commerce-phone" id="commerce-phone">
                         </form>
                         <div class="cards-list">
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="owns">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение
@@ -560,7 +560,7 @@
                                 </div>
                             </a>
             
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="owns">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение
@@ -643,7 +643,7 @@
                                 </div>
                             </a>
         
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="owns">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение
@@ -724,7 +724,7 @@
                                 </div>
                             </a>
         
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="owns">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение
@@ -808,7 +808,7 @@
                                 </div>
                             </a>
             
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="partners">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение
@@ -891,7 +891,7 @@
                                 </div>
                             </a>
         
-                            <a href="#" class="card">
+                            <a href="#" class="card" data-type="partners">
                                 <div class="card__img-block">
                                     <div class="card__object-label promo">
                                         Лучшее предложение

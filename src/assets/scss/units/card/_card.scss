@@ -490,9 +490,34 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
 
-
+    
 }
 
+.realty-container[data-type="all"]{
+    .card{
+        display: flex ;
+    }
+}
+
+.realty-container[data-type="partners"]{
+    .card{
+        display: none ;
+    }
+
+    .card[data-type="partners"]{
+        display: flex;
+    }
+}
+
+.realty-container[data-type="own"]{
+    .card{
+        display: none ;
+    }
+
+    .card[data-type="own"]{
+        display: flex;
+    }
+}
 
 
 .card__text-block{
