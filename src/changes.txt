@@ -1,0 +1,10 @@
+                    <div class="slider-filter">
+                        <button class="filter-btn active" data-type="owns">Собственные</button>
+                        <button class="filter-btn" data-type="partners">Партнерские</button>
+                    </div>
+
+                    <div class="realty-container" data-type="partners">
+
+                            <a href="#" class="card" data-type="owns">
+                            </a>
+                    </div

@@ -5942,10 +5942,10 @@ a.close {
   display: flex;
 }
 
-.realty-container[data-type=own] .card {
+.realty-container[data-type=owns] .card {
   display: none;
 }
-.realty-container[data-type=own] .card[data-type=own] {
+.realty-container[data-type=owns] .card[data-type=owns] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
